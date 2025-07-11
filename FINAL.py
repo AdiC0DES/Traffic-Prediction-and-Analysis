@@ -29,12 +29,12 @@ plt.figure(figsize=(12, 6))
 sns.lineplot(x='DateTime', y='Vehicles', hue='Junction', data=df)
 plt.title('Traffic Flow Across Different Junctions Over Time')
 plt.xticks(rotation=45)
-#plt.show()
+
 
 # 2. Pairplot of different features
 sns.pairplot(df[['Junction', 'Vehicles', 'year', 'month', 'day', 'hour']])
 plt.suptitle('Pairplot of Different Features', y=1.02)
-#plt.show()
+
 
 # 3. Histogram of month-wise traffic flow
 plt.figure(figsize=(10, 6))
@@ -42,31 +42,31 @@ sns.histplot(df, x='month', hue='Junction', multiple='stack', kde=False, bins=12
 plt.title('Month-wise Traffic Flow Across Junctions')
 plt.xlabel('Month')
 plt.ylabel('Number of Vehicles')
-#plt.show()
+
 
 # 4. Lineplot for vehicles across the year
 plt.figure(figsize=(10, 6))
 sns.lineplot(x='year', y='Vehicles', hue='Junction', data=df)
 plt.title('Number of Vehicles Across the Year for Different Junctions')
-#plt.show()
+
 
 # Lineplot for vehicles across the month
 plt.figure(figsize=(10, 6))
 sns.lineplot(x='month', y='Vehicles', hue='Junction', data=df)
 plt.title('Number of Vehicles Across the Month for Different Junctions')
-#plt.show()
+
 
 # Lineplot for vehicles across the day
 plt.figure(figsize=(10, 6))
 sns.lineplot(x='day', y='Vehicles', hue='Junction', data=df)
 plt.title('Number of Vehicles Across the Day for Different Junctions')
-#plt.show()
+
 
 # Lineplot for vehicles across the hour
 plt.figure(figsize=(10, 6))
 sns.lineplot(x='hour', y='Vehicles', hue='Junction', data=df)
 plt.title('Number of Vehicles Across the Hour for Different Junctions')
-#plt.show()
+
 
 # 5. Countplot of traffic across different years
 plt.figure(figsize=(10, 6))
@@ -74,7 +74,7 @@ sns.countplot(x='year', hue='Junction', data=df)
 plt.title('Traffic Count Across Different Years')
 plt.xlabel('Year')
 plt.ylabel('Count')
-#plt.show()
+
 
 # 6. Plotting the number of vehicles across every day of the week for each junction
 plt.figure(figsize=(12, 6))
@@ -82,7 +82,7 @@ sns.lineplot(x='day_of_week', y='Vehicles', hue='Junction', data=df)
 plt.title('Number of Vehicles Across Each Day of the Week for Each Junction')
 plt.xlabel('Day of the Week (0=Monday, 6=Sunday)')
 plt.ylabel('Number of Vehicles')
-#plt.show()
+
 
 plt.show()
 
